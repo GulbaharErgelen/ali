@@ -1,0 +1,92 @@
+SQL SELECT Kullanımı
+
+SELECT ifadesi veritbanından verileri okumak için kullanılır. Veritbanındaki tablo üzerindeki bütün alanlardan veri çekilebileceği gibi belirteceğimiz bir kaç alandan da veri çekebiliriz. 
+En azındna bir alan belirtmek gerekmektedir.
+
+Select Kullanım Biçimi:
+Eğer bütün alanlardan veri çekeceksek, Select ifadesinden sonra * işareti konulur. Böylece bütün alanlardan veri çekileceği belirtilmiş olunur.
+
+SELECT *
+FROM tablo_adi
+
+
+Eğer birkaç tane alanlardan veri çekeceksek, Select ifadesinden sonra alanarı virgüller ayırarak yazarız.
+
+Örn:
+SELECT alan_adi1, alan_adi2
+FROM tablo_adi
+
+
+DISTINCT Kullanımı:
+ SELECT DISTINCT deyimi, yalnızca farklı (farklı) değerleri döndürmek için kullanılır.
+Bir tablonun içinde, bir sütun genellikle birçok yinelenen değer içerir; ve bazen sadece farklı (farklı) değerleri listelemek istersiniz.
+Böyle durumlarda Distinct Komutu kullanılır.
+
+örn:
+SELECT 
+    DISTINCT sutun1, 
+    sutun2, 
+    ...., 
+    sutunN
+FROM   
+    tablo_adi;
+ 
+
+WHERE Kullanımı:
+ WHERE cümlesi tablodaki kayıtları filtrelemek için kullanılır.
+WHERE yan tümcesi, yalnızca belirtilen bir koşulu yerine getiren kayıtları ayıklamak için kullanılır. 
+
+
+örn:
+SELECT 
+    sutun1, 
+    sutun2, 
+    ...., 
+    sutunN
+FROM   
+    tablo_adi
+WHERE 
+    sart_ifadesi;
+	
+
+SELECT IN Kullanımı :
+ IN operatörü, bir WHERE maddesinde birden çok değer belirtmenize izin verir.
+IN komutu genellikle  birden fazla OR koşulu kullanılacağı zaman SQL yazımını kolaylaştırmak için kullanılır.
+
+örn:
+SELECT 
+    sutun1, 
+    sutun2, 
+    ...., 
+    sutunN
+FROM   
+    tablo_adi
+WHERE 
+sutun_adi IN(deger1,deger2,degerN)
+ 
+
+
+COUNT Kullanımı:
+ COUNT () komutu , belirtilen bir ölçütle eşleşen satır sayısını döndürür. Örnek olarak maaşı 3000 üzeri olan kayıt sayısı.
+
+örn:
+ SELECT COUNT(sutun_adi)
+FROM   tablo_adi
+WHERE  VARSA_ŞART
+
+SUM Kullanımı:
+ SUM () komutu, sayısal bir sütunun toplamını döndürür.
+ 
+ örn:
+ SELECT SUM(sutun_adi)
+FROM   tablo_adi
+WHERE  VARSA_ŞART
+ 
+AVG Kullanımı:
+ AVG()  komutu Belirtilen sütundaki değerlerin ortalamasını getirir.
+ 
+ Örn:
+ SELECT AVG(sutun_adi)
+FROM   tablo_adi
+WHERE  VARSA_ŞART
+
