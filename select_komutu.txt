@@ -90,3 +90,22 @@ AVG Kullanımı:
 FROM   tablo_adi
 WHERE  VARSA_ŞART
 
+ORDER BY Kullanımı
+SQL ORDER BY Kullanımı :ORDER BY anahtar sözcüğü, kayıtları varsayılan olarak artan sırada sıralar.
+Kayıtları azalan sırayla sıralamak için DESC anahtar sözcüğünü kullanın.
+
+ORDER BY komutu birden fazla sütunuda sıralayabilir. Örneğin isimleri artan maaşları azalan sıralama gibi.
+
+örn:
+
+SELECT 
+    sutun1, 
+    sutun2,
+    ....,
+    sutunN
+FROM
+    tablo_adi
+WHERE
+    VARSA SART
+ORDER BY 
+    sutun_adi {ASC|DESC}
